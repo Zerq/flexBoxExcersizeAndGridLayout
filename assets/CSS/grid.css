@@ -1,75 +1,216 @@
-.wrapper>header{
-    grid-area: "PageHeader"; 
-    background-color: aqua;
-    width: 100%;
+/*RESET*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* dark mode user-agent-styles */
+html {
+    color-scheme: dark light;
+}
+
+/* min body height */
+body {
+    min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/*RESET*/
+
+:root{
+    font-family: sans-serif;
+}
+
+.wrapper > main {
+    display: contents;
+}
+
+
+.wrapper > header {
+   grid-area:  header;
+   background-color:black;
+   grid-column-start: 1;
+   grid-column-end: 4;
+
+width: 100%;
+   
+}
+
+
+.wrapper > main >  h2 {
+    grid-area:  title;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+
+
+    background-color: #3DE07E;
+    background-image: url(/assets/images/invisoNinja.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    height: 26rem;
+}
+
+
+
+.wrapper > main >  section.content  {
+    grid-area:  content;
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    
+}
+
+.wrapper > main >  section.total {
+    grid-area:  total;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    background-color: black;
+    color:white;
+}
+
+.wrapper > footer {
+    padding: 3rem;
+    grid-area:  footer;  
+    padding-bottom: 6rem;
+    background-color: #333333;
+    color: white;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
+    grid-gap: 2rem;   
+    padding: 3rem;
  
  
 }
 
-.wrapper main{
-    grid-area: "Products";
-    background-color: yellow;
+.content article{
+    background-color: white;
+
 }
 
-
+.wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+ 
 
 footer {
-    grid-area: "footer";
-    background-color: plum;
-}
- 
-
-.wrapper{
-   
     display: grid;
+    grid-template-columns: 33% 33% 33%;
+    li {
+        text-align: center;
+        list-style: none;
+        font-size:medium;
+        font-weight: bolder;
+    }
 
-    grid-gap: 1rem;
-    grid-template-rows: auto;
-
-    grid-template-areas:
-    "PageHeader"  
-    "Products"   
-    "Products"    
-    "Products"   
-    "Products"
-    "footer" 
-
+    img {
+        width: 1rem;
+    }
 }
- 
-
-
-
-.wrapper .products{
-    grid-area: "Products2";
-    background-color: rgb(0, 255, 115);
-    grid-row:33%;
+footer>nav {
+    display: contents;
 }
 
-
-.wrapper .featuredProducts{
-    grid-area: "featuredProducts";
-    background-color: rgb(255, 0, 242);
-    grid-row: 50%;
-   
+footer>nav> ul {
+    display: contents;
+    h3{
+        font-size: x-large;
+        padding-bottom: 1rem;
+    }
 }
 
-.wrapper main {
+footer a {
+    color:white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer>nav>ul>li:nth-child(3)>ul {
     display: grid;
-
-    grid-gap: 1rem;
-   
-    
-    grid-template-areas:
-    "Products2 Products2 Products2"
-    "Products2 Products2 Products2" 
-    "Products2 Products2 Products2" 
-    "featuredProducts featuredProducts featuredProducts" 
-
+    grid-template-columns: 33% 33% 33%;
+    gap: 1rem;
+    margin-inline: auto;
+    width: max-content;
 }
 
 
+.total {
+    width: 100%;
+    padding-inline:3rem;
+    table {
+        margin-top: 4rem;
+        width: 100%;
+        border: 0;
+        border-collapse: collapse;
 
-main {
-     background-color: cadetblue;
+        td {
+            padding: 0.5rem;
+        }
+
+        thead {
+            background-color: #5a0507;
+            color: #ffe0b7;
+
+            td {
+                padding: 0.25rem;
+            }
+        }
+
+
+
+    }
+
+    button {
+        float:right ;
+    }       
 }
 
+body {
+    width: 80vw;
+    margin-inline: auto;
+}
+
+button {
+    margin-top: 1rem;
+    background-color: #FC2452;
+    color: white;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    margin: 1rem;
+    border: 0;
+    border-radius: 0.25rem;
+}

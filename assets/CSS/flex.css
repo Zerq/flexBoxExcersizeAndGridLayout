@@ -86,7 +86,7 @@ header {
     }
 
     h1 {
-        font-size: xx-large;
+        font-size: xxx-large;
         font-weight: bolder;
         text-align: center;
     }
@@ -106,7 +106,7 @@ button {
 main {
     color: white;
     background-color: black;
-    padding: 5rem;
+    padding: 3rem;
     display: flex;
     flex-wrap: wrap;
 
@@ -157,24 +157,14 @@ main {
         flex: calc(33% - 6rem);
     }
 
-
-
-
     article {
         background-color: white;
         color: black;
 
-
-         h3, h2, p{
+        h3, h2, p{
             margin:1rem;
         }
-
-   
     }
-
-
-
-
 }
 
 .total {
