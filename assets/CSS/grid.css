@@ -34,103 +34,155 @@ video {
 
 /*RESET*/
 
-:root{
+:root {
     font-family: sans-serif;
-}
-
-.wrapper > main {
-    display: contents;
-}
-
-
-.wrapper > header {
-   grid-area:  header;
-   background-color:black;
-   grid-column-start: 1;
-   grid-column-end: 4;
-
-width: 100%;
-   
-}
-
-
-.wrapper > main >  h2 {
-    grid-area:  title;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-
-
-    background-color: #3DE07E;
-    background-image: url(/assets/images/invisoNinja.png);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    padding: 1rem;
-    height: 26rem;
-}
-
-
-
-.wrapper > main >  section.content  {
-    grid-area:  content;
-    background-color: black;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    
-}
-
-.wrapper > main >  section.total {
-    grid-area:  total;
-
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    background-color: black;
-    color:white;
-}
-
-.wrapper > footer {
-    padding: 3rem;
-    grid-area:  footer;  
-    padding-bottom: 6rem;
-    background-color: #333333;
-    color: white;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 5;
-}
-
-.content{
-    display: grid;
-    grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
-    grid-gap: 2rem;   
-    padding: 3rem;
- 
- 
-}
-
-.content article{
-    background-color: white;
-
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 100%;
+    grid-template: "header"
+    "title" "title" "title"
+    "content"
+    "content"
+    "content"
+    "products" 
+    "featuredProducts"
+    "total"
+    "footer";
 }
- 
+
+.wrapper>main {
+    display: contents;
+}
+
+.wrapper>header {
+    grid-area: header;
+    grid-column-start: span 4;
+    
+    grid-row: span 1;
+
+    
+    width: 100%;
+
+    h1 {
+        font-size: xxx-large;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    padding: 1rem;
+    height: 26rem;
+    background-color: #3DE07E;
+    background-image: url(/assets/images/invisoNinja.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.wrapper>main>h2 {
+    grid-area: title;
+    grid-column-start: span 4;
+
+
+    padding-top: 1rem;
+    padding-inline: 3rem;
+    padding-bottom: 0;
+    background-color: black;
+    color: white;
+    flex: 100%;
+    font-size: x-large;
+    font-weight: bolder;  
+}
+
+.wrapper>main>section.content {
+    grid-area: content;
+    background-color: black;
+    grid-column-start: span 4;
+
+   
+
+}
+
+.products
+{
+    grid-area: products; 
+    background-color: black;
+    grid-column-start: span 4;
+
+    grid-row-start: span 3;
+}
+
+.featuredProducts{
+    grid-area: featuredProducts;
+    background-color: black;
+    grid-column-start: span 4;
+}
+
+
+
+.wrapper>main>section.total {
+    grid-area: total;
+    grid-column-start: span 4;
+
+    background-color: black;
+    color: white;
+}
+
+.wrapper>footer {
+    padding: 3rem;
+    grid-area: footer;
+    padding-bottom: 6rem;
+    background-color: #333333;
+    color: white;
+    grid-column-start: span 4;
+
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
+    grid-gap: 2rem;
+    padding: 3rem;
+}
+
+.products, .featuredProducts{    
+    display: grid;
+    grid-gap: 2rem;
+    padding: 3rem;
+    grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
+}
+
+
+
+
+
+main > .products {
+
+    width:100%;
+    display: grid;
+    grid-template-columns: calc(33% - 1rem) calc(33% - 1rem) calc(33% - 1rem);
+    grid-gap: 2rem;
+    padding: 3rem;
+}
+
+
+
+.content article {
+    background-color: white;
+}
+
+
+
 
 footer {
     display: grid;
     grid-template-columns: 33% 33% 33%;
+
     li {
         text-align: center;
         list-style: none;
-        font-size:medium;
+        font-size: medium;
         font-weight: bolder;
     }
 
@@ -138,20 +190,21 @@ footer {
         width: 1rem;
     }
 }
+
 footer>nav {
     display: contents;
 }
 
-footer>nav> ul {
+footer>nav>ul {
     display: contents;
-    h3{
+    h3 {
         font-size: x-large;
         padding-bottom: 1rem;
     }
 }
 
 footer a {
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
@@ -167,10 +220,10 @@ footer>nav>ul>li:nth-child(3)>ul {
     width: max-content;
 }
 
-
 .total {
     width: 100%;
-    padding-inline:3rem;
+    padding-inline: 3rem;
+
     table {
         margin-top: 4rem;
         width: 100%;
@@ -189,14 +242,11 @@ footer>nav>ul>li:nth-child(3)>ul {
                 padding: 0.25rem;
             }
         }
-
-
-
     }
 
     button {
-        float:right ;
-    }       
+        float: right;
+    }
 }
 
 body {
@@ -213,4 +263,8 @@ button {
     margin: 1rem;
     border: 0;
     border-radius: 0.25rem;
+}
+
+nav button {
+    background-color: transparent;
 }

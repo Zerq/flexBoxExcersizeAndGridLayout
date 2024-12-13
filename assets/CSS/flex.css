@@ -33,7 +33,7 @@ video {
 }
 
 /*RESET*/
-:root{
+:root {
     font-family: sans-serif;
 }
 
@@ -42,14 +42,12 @@ body {
     margin-inline: auto;
 }
 
-.wrapper{
-
-}
+.wrapper {}
 
 header {
     nav {
- 
-        
+
+
         button {
             border: 0;
             background-color: transparent;
@@ -58,19 +56,13 @@ header {
         }
 
 
-       .collapseButton:hover+ul, .hamburgerButton:hover+ul,
-       .collapseButton+ul:hover, .hamburgerButton+ul:hover
-       
-       {
-         display:initial;
-       } 
-    
-    
+        .collapseButton:hover+ul,
+        .hamburgerButton:hover+ul,
+        .collapseButton+ul:hover,
+        .hamburgerButton+ul:hover {
+            display: initial;
+        }
     }
-
-
-
-
 
     background-color: #3DE07E;
     background-image: url(/assets/images/invisoNinja.png);
@@ -123,34 +115,26 @@ main {
 
         article {
             flex: 50%;
-
         }
     }
 
-    .featuredProducts{
+    .featuredProducts {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 3rem;
         padding-top: 3rem;
-
     }
 
     .featuredProducts article {
         flex: calc(50% - 3rem);
     }
 
-
-
-
-    .products{
+    .products {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 3rem;
-
-        
-
     }
 
     .products article {
@@ -161,8 +145,10 @@ main {
         background-color: white;
         color: black;
 
-        h3, h2, p{
-            margin:1rem;
+        h3,
+        h2,
+        p {
+            margin: 1rem;
         }
     }
 }
@@ -188,20 +174,17 @@ main {
                 padding: 0.25rem;
             }
         }
-
-
-
     }
 
     button {
-        float:right ;
-    }       
+        float: right;
+    }
 }
 
 footer {
 
     a {
-        color:white;
+        color: white;
         text-decoration: none;
     }
 
@@ -226,12 +209,12 @@ footer {
             text-align: center;
             flex: 33%;
             list-style: none;
-            font-size:medium;
+            font-size: medium;
             font-weight: bolder;
         }
 
-        h3{
-            font-size:  x-large;
+        h3 {
+            font-size: x-large;
             padding-bottom: 1rem;
         }
 
@@ -241,22 +224,14 @@ footer {
             flex-direction: column;
 
             li {
-        
+
                 width: auto;
             }
-
-
         }
-
-
-
-
     }
-
-
 }
 
- footer>nav>ul>li:nth-child(3)>ul {
+footer>nav>ul>li:nth-child(3)>ul {
     justify-content: center;
     flex-direction: row;
     justify-self: center;
@@ -267,4 +242,3 @@ footer>nav>ul>li:nth-child(3)>ul li {
 
     flex: inherit
 }
-
