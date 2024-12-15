@@ -58,11 +58,8 @@ video {
 
 .wrapper>header {
     grid-area: header;
-    grid-column-start: span 4;
-    
-    grid-row: span 1;
-
-    
+    grid-column-start: span 4;    
+    grid-row: span 1;    
     width: 100%;
 
     h1 {
@@ -82,10 +79,8 @@ video {
 .wrapper>main>h2 {
     grid-area: title;
     grid-column-start: span 4;
-
-
     padding-top: 1rem;
-    padding-inline: 3rem;
+    padding-inline: 14rem;
     padding-bottom: 0;
     background-color: black;
     color: white;
@@ -97,10 +92,7 @@ video {
 .wrapper>main>section.content {
     grid-area: content;
     background-color: black;
-    grid-column-start: span 4;
-
-   
-
+    grid-column-start: span 4;  
 }
 
 .products
@@ -108,24 +100,23 @@ video {
     grid-area: products; 
     background-color: black;
     grid-column-start: span 4;
-
     grid-row-start: span 3;
+    padding-inline: 14rem !important
 }
 
 .featuredProducts{
     grid-area: featuredProducts;
     background-color: black;
     grid-column-start: span 4;
+    padding-inline:14rem !important
 }
-
-
 
 .wrapper>main>section.total {
     grid-area: total;
     grid-column-start: span 4;
-
     background-color: black;
     color: white;
+    padding-inline: 14rem;    
 }
 
 .wrapper>footer {
@@ -135,15 +126,14 @@ video {
     background-color: #333333;
     color: white;
     grid-column-start: span 4;
-
 }
-
 
 .content {
     display: grid;
     grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
     grid-gap: 2rem;
     padding: 3rem;
+    padding-inline: 14rem;
 }
 
 .products, .featuredProducts{    
@@ -152,10 +142,6 @@ video {
     padding: 3rem;
     grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
 }
-
-
-
-
 
 main > .products {
 
@@ -166,14 +152,9 @@ main > .products {
     padding: 3rem;
 }
 
-
-
-.content article {
+ article {
     background-color: white;
 }
-
-
-
 
 footer {
     display: grid;
@@ -223,7 +204,7 @@ footer>nav>ul>li:nth-child(3)>ul {
 .total {
     width: 100%;
     padding-inline: 3rem;
-
+    padding-inline: 14rem;
     table {
         margin-top: 4rem;
         width: 100%;
@@ -252,6 +233,14 @@ footer>nav>ul>li:nth-child(3)>ul {
 body {
     width: 80vw;
     margin-inline: auto;
+}
+
+ article h3, article h2 {
+    margin-block: 1rem;
+}
+
+ article h3, article h2, article p {
+    margin-inline: 1rem;
 }
 
 button {
