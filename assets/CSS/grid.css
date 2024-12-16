@@ -79,7 +79,7 @@ video {
 .wrapper>main>h2 {
     grid-area: title;
     grid-column-start: span 4;
-    padding-top: 1rem;
+    padding-top: 6rem;
     padding-inline: 14rem;
     padding-bottom: 0;
     background-color: black;
@@ -108,7 +108,8 @@ video {
     grid-area: featuredProducts;
     background-color: black;
     grid-column-start: span 4;
-    padding-inline:14rem !important
+    padding-inline:14rem !important;
+    padding-bottom: 6rem;
 }
 
 .wrapper>main>section.total {
@@ -135,11 +136,10 @@ video {
     padding: 3rem;
     padding-inline: 14rem;
 }
-
+  
 .products, .featuredProducts{    
     display: grid;
     grid-gap: 2rem;
-    padding: 3rem;
     grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
 }
 
@@ -149,7 +149,8 @@ main > .products {
     display: grid;
     grid-template-columns: calc(33% - 1rem) calc(33% - 1rem) calc(33% - 1rem);
     grid-gap: 2rem;
-    padding: 3rem;
+    padding: 2rem;
+    padding-top: 6rem;
 }
 
  article {
@@ -252,6 +253,12 @@ button {
     margin: 1rem;
     border: 0;
     border-radius: 0.25rem;
+
+}
+
+.total button {
+    margin-block: 6rem;
+
 }
 
 nav button {
