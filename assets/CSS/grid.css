@@ -36,7 +36,17 @@ video {
 
 :root {
     font-family: sans-serif;
+    --DarkBG: black;
+    --DarkIshBG:   #333333;
+    --GreenBG: #3DE07E;
+    --WhiteBG: white;
+    --RedishDarkBG: #5a0507;
+    --PinkishBG: #FC2452;
+    --whiteText: white;
+    --beigeText: #ffe0b7;
 }
+
+
 
 .wrapper {
     display: grid;
@@ -70,8 +80,9 @@ video {
 
     padding: 1rem;
     height: 26rem;
-    background-color: #3DE07E;
-    background-image: url(/assets/images/invisoNinja.png);
+    background-color:  var(--GreenBG);
+    background-image: url(/assets/images/invisoNinja.svg);
+    background-size: 234px 152px;
     background-position: bottom center;
     background-repeat: no-repeat;
 }
@@ -82,8 +93,8 @@ video {
     padding-top: 6rem;
     padding-inline: 14rem;
     padding-bottom: 0;
-    background-color: black;
-    color: white;
+    background-color: var(--DarkBG);
+    color: var(--whiteText);
     flex: 100%;
     font-size: x-large;
     font-weight: bolder;  
@@ -91,14 +102,14 @@ video {
 
 .wrapper>main>section.content {
     grid-area: content;
-    background-color: black;
+    background-color:  var(--DarkBG);
     grid-column-start: span 4;  
 }
 
 .products
 {
     grid-area: products; 
-    background-color: black;
+    background-color: var(--DarkBG);
     grid-column-start: span 4;
     grid-row-start: span 3;
     padding-inline: 14rem !important
@@ -106,7 +117,7 @@ video {
 
 .featuredProducts{
     grid-area: featuredProducts;
-    background-color: black;
+    background-color:  var(--DarkBG);
     grid-column-start: span 4;
     padding-inline:14rem !important;
     padding-bottom: 6rem;
@@ -115,8 +126,8 @@ video {
 .wrapper>main>section.total {
     grid-area: total;
     grid-column-start: span 4;
-    background-color: black;
-    color: white;
+    background-color: var(--DarkBG);
+    color: var(--whiteText);
     padding-inline: 14rem;    
 }
 
@@ -124,8 +135,8 @@ video {
     padding: 3rem;
     grid-area: footer;
     padding-bottom: 6rem;
-    background-color: #333333;
-    color: white;
+    background-color: var(--DarkIshBG);
+    color: var(--whiteText);
     grid-column-start: span 4;
 }
 
@@ -136,7 +147,7 @@ video {
     padding: 3rem;
     padding-inline: 14rem;
 }
-  
+
 .products, .featuredProducts{    
     display: grid;
     grid-gap: 2rem;
@@ -154,7 +165,7 @@ main > .products {
 }
 
  article {
-    background-color: white;
+    background-color: var(--WhiteBG);
 }
 
 footer {
@@ -186,7 +197,7 @@ footer>nav>ul {
 }
 
 footer a {
-    color: white;
+    color: var(--whiteText);
     text-decoration: none;
 }
 
@@ -217,8 +228,8 @@ footer>nav>ul>li:nth-child(3)>ul {
         }
 
         thead {
-            background-color: #5a0507;
-            color: #ffe0b7;
+            background-color: var(--RedishDarkBG);
+            color: var(--beigeText); 
 
             td {
                 padding: 0.25rem;
@@ -246,7 +257,7 @@ body {
 
 button {
     margin-top: 1rem;
-    background-color: #FC2452;
+    background-color: var(--PinkishBG);
     color: white;
     padding: 0.5rem;
     padding-inline: 1rem;
@@ -261,6 +272,31 @@ button {
 
 }
 
-nav button {
+nav button { 
     background-color: transparent;
 }
+
+
+
+@media (prefers-color-scheme: light) {
+    :root {
+        font-family: sans-serif;
+        color-scheme: light dark; /* both supported */
+    
+        --DarkBG:#d4d4d4;
+        --DarkIshBG: #ebebeb;
+        --GreenBG: #3DE07E;
+        --WhiteBG: white;
+        --RedishDarkBG:red;
+        --PinkishBG:#FC2452;
+        --whiteText:black;
+        --beigeText:#7e4700;
+    }
+
+
+
+
+    .wrapper>header {
+        background-image: url(/assets/images/arcticninjaavneger.svg);
+    }
+  }
