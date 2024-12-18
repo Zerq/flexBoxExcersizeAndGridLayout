@@ -140,8 +140,8 @@ main {
     .products article {
         flex: calc(33% - 6rem);
     }
-
-    article {
+    
+    .featuredProducts article,  .content article {
         background-color: white;
         color: black;
 
